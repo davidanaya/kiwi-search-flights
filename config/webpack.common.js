@@ -42,7 +42,8 @@ module.exports = {
       name: ['app', 'vendor', 'polyfills']
     }),
     new CopyWebpackPlugin([
-      { from: 'node_modules/@angular/material/prebuilt-themes/indigo-pink.css', to: 'styles' }
+      { from: 'node_modules/@angular/material/prebuilt-themes/indigo-pink.css', to: 'styles' },
+      { from: path.resolve(__dirname, '../src/assets/favicons/favicon.png'), to: 'favicons' }
     ]),
     new HtmlWebpackPlugin({
       template: 'src/index.html'
