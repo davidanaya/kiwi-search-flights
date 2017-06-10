@@ -1,8 +1,9 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, ChangeDetectionStrategy } from '@angular/core';
 import { DatePipe } from '@angular/common';
 
 @Component({
   selector: 'kw-leg',
+  changeDetection: ChangeDetectionStrategy.OnPush,
   template: `
     <section class="leg">
       <div class="airline">

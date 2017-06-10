@@ -4,7 +4,7 @@ import { Component, OnInit } from '@angular/core';
   selector: 'kw-banners',
   template: `
     <div class="banners">
-      <img *ngFor="let img of images" class="banner" src="src/assets/img/{{img}}.png" alt="banners"/>
+      <img *ngFor="let img of images" class="banner" src="assets/img/{{img}}.png" alt="banners"/>
     </div>
   `,
   styleUrls: ['banners.component.scss']

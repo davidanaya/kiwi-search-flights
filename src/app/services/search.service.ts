@@ -25,7 +25,7 @@ export class SearchService {
               private datePipe: DatePipe) {}
 
   getFlights(search: Search): Observable<any> {
-    const date = search.depart ? this.datePipe.transform(search.depart, 'dd/MM/y') : '';
+    const date = search.depart ? this.datePipe.transform(search.depart, 'dd/MM/y') : undefined;
     const params = [
       { type: 'flyFrom', value: search.from.id },
       { type: 'to', value: search.to.id },
@@ -56,6 +56,7 @@ export class SearchService {
   private buildQuerySearch(params: Param[]): string {
     if (!params) return '';
     return params
+      .filter(param => param.value)
       .map(param => `${param.type}=${param.value}`)
       .join('&');
   }

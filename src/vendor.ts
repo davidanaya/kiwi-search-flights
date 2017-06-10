@@ -7,6 +7,3 @@ import '@angular/compiler';
 import '@angular/http';
 import '@angular/router';
 import '@angular/forms';
-
-// RxJS
-import 'rxjs';

@@ -6,6 +6,11 @@ const path = require('path');
 
 const ENV = process.env.NODE_ENV = process.env.ENV = 'production';
 
+const settings = {
+  ENV: ENV,
+  API: 'https://api.skypicker.com'
+}
+
 module.exports = webpackMerge(commonConfig, {
   devtool: 'source-map',
   output: {
@@ -22,7 +27,7 @@ module.exports = webpackMerge(commonConfig, {
       }
     }),
     new webpack.DefinePlugin({
-      'process.env.ENV': JSON.stringify(ENV)
+      'process.env.SETTINGS': JSON.stringify(settings)
     }),
     new webpack.LoaderOptionsPlugin({
       htmlLoader: {
