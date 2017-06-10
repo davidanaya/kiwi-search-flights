@@ -1,0 +1,25 @@
+.list {
+  list-style-type: none;
+}
+
+.card {
+  display: flex;
+  background-color: #fff;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 2%;
+  box-shadow: 2px 2px 2px #cac7d0;
+
+  .quote {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    margin: 0 30px;
+
+    .price {
+      font-size: 140%;
+      font-weight: 400;
+    }
+  }
+}
